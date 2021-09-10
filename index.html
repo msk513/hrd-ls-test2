@@ -19,14 +19,16 @@
         <H2>Scheduling of authenticated external users</H2>
 	<p id='salesforce-login'>Harada Test</p>
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+	    
+	    
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>	    
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //または false
-		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
+		embedded_svc.settings.language = 'ja-JP'; //たとえば、「en」または「en-US」を入力します
 
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
+		//embedded_svc.settings.defaultMinimizedText = '原田テストオンライン'; //(エキスパートとチャットにデフォルト設定)
+		//embedded_svc.settings.disabledMinimizedText = '原田テストオフライン'; //(エージェントがオフラインにデフォルト設定)
 
 		//embedded_svc.settings.loadingText = ''; //(読み込み中にデフォルト設定)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(リリースのドメインを設定して、訪問者がチャットセッション中にサブドメインを移動できるようにします)
@@ -44,10 +46,10 @@
 
 		embedded_svc.init(
 			'https://svcsdo-20210826-2.my.salesforce.com',
-			'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/hrd',
+			'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/napili',
 			gslbBaseURL,
 			'00D5h000003HnPf',
-			'Appointment_Booking_for_HRD',
+			'Appointment_Booking_for_Napili_HRD',
 			{
 				
 			}
