@@ -19,16 +19,14 @@
         <H2>Scheduling of authenticated external users</H2>
 	<p id='salesforce-login'></p>
 
-	    
-	    
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>	    
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //または false
-		embedded_svc.settings.language = 'ja-JP'; //たとえば、「en」または「en-US」を入力します
+		embedded_svc.settings.language = ''; //たとえば、「en」または「en-US」を入力します
 
-		//embedded_svc.settings.defaultMinimizedText = '原田テストオンライン'; //(エキスパートとチャットにデフォルト設定)
-		//embedded_svc.settings.disabledMinimizedText = '原田テストオフライン'; //(エージェントがオフラインにデフォルト設定)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(エキスパートとチャットにデフォルト設定)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(エージェントがオフラインにデフォルト設定)
 
 		//embedded_svc.settings.loadingText = ''; //(読み込み中にデフォルト設定)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(リリースのドメインを設定して、訪問者がチャットセッション中にサブドメインを移動できるようにします)
@@ -39,17 +37,17 @@
 		embedded_svc.settings.entryFeature = 'FieldService';
 
 		embedded_svc.settings.useCustomAuthentication = false;
-		embedded_svc.settings.loginClientId = '3MVG95mg0lk4batiGxOC7oRVPBClZer3DpIMbWWP23x7tTE3pEzJfm.wla_bz5cxViZu1VxgHw0V5tuMAhOoT';
-		embedded_svc.settings.loginRedirectURL = 'https://hrd-ls-test2.herokuapp.com/callback.html';
-		embedded_svc.settings.loginTargetQuerySelector = '#salesforce-login';
-		embedded_svc.settings.authenticationStartLabel = 'スケジュール予約を実行';
+		embedded_svc.settings.loginClientId ='3MVG95mg0lk4batiGxOC7oRVPBClZer3DpIMbWWP23x7tTE3pEzJfm.wla_bz5cxViZu1VxgHw0V5tuMAhOoT';
+		embedded_svc.settings.loginRedirectURL ='https://hrd-ls-test2.herokuapp.com/callback.html';
+		embedded_svc.settings.loginTargetQuerySelector ='#salesforce-login';
+		embedded_svc.settings.authenticationStartLabel ='スケジュール予約を実行';
 
 		embedded_svc.init(
 			'https://svcsdo-20210826-2.my.salesforce.com',
 			'https://cirrus-sccommunity-1779bc252-17b8135c3c4.force.com/hrd2',
 			gslbBaseURL,
 			'00D5h000003HnPf',
-			'Appointment_Booking_for_Napili_HRD',
+			'Appointment_Booking_for_HRD2',
 			{
 				
 			}
@@ -67,6 +65,7 @@
 		initESW('https://service.force.com');
 	}
 </script>
+
 
 
     </BODY>
